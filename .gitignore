@@ -1,0 +1,6 @@
+/Amon2-Plugin-Web-Raw-*
+/.build
+/_build*
+/Build
+MYMETA.*
+!META.json
