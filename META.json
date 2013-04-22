@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "render Raw Data",
    "author" : [
       "koba04 <koba0004@gmail.com>"
    ],
@@ -46,6 +46,20 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/koba04/Amon2-Plugin-Web-Raw/issues"
+      },
+      "homepage" : "https://github.com/koba04/Amon2-Plugin-Web-Raw",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/koba04/Amon2-Plugin-Web-Raw.git",
+         "web" : "https://github.com/koba04/Amon2-Plugin-Web-Raw"
+      }
+   },
+   "version" : "0.01",
+   "x_contributors" : [
+      "Toru, Kobayashi <koba0004@gmail.com>"
+   ]
 }
 
