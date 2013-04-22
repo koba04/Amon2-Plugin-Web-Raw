@@ -5,12 +5,24 @@ use 5.008_005;
 our $VERSION = '0.01';
 use Amon2::Util ();
 
-my $CONTENT_TYPE_MAP = {
+our $CONTENT_TYPE_MAP = {
+    # text
+    txt     => 'text/plain',
+    xml     => 'text/xml',
+    css     => 'text/css',
+    csv     => 'text/csv',
+    js      => 'text/javascript',
+
+    # image
     png     => 'image/png',
     jpeg    => 'image/jpeg',
     gif     => 'image/gif',
+    bmp     => 'image/bmp',
+
+    # application
     swf     => 'application/x-shockwave-flash',
     zip     => 'application/zip',
+    pdf     => 'application/pdf',
 };
 
 sub init {
@@ -63,7 +75,7 @@ Amon2::Plugin::Web::Raw generate raw data response.
 =head1 METHODS $c->render_raw($type => $data);
 
 Generate instance of L<Plack::Response> of Raw data.
-support raw type is png, jpeg, gif, swf and zip.
+support raw type see $Amon2::Plugin::Web::Raw::CONTENT_TYPE_MAP
 
 =head1 AUTHOR
 
