@@ -21,7 +21,7 @@ Amon2::Plugin::Web::Raw generate raw data response.
 # METHODS $c->render\_raw($type => $data);
 
 Generate instance of [Plack::Response](http://search.cpan.org/perldoc?Plack::Response) of Raw data.
-support raw type is png, jpeg and gif.
+support raw type is png, jpeg, gif, swf and zip.
 
 # AUTHOR
 
