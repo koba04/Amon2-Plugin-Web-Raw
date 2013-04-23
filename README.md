@@ -1,6 +1,6 @@
 # NAME
 
-Amon2::Plugin::Web::Raw - render Raw Data
+Amon2::Plugin::Web::Raw - render raw data
 
 # SYNOPSIS
 
@@ -20,7 +20,7 @@ Amon2::Plugin::Web::Raw generate raw data response.
 
 # METHODS $c->render\_raw($type => $data);
 
-Generate instance of [Plack::Response](http://search.cpan.org/perldoc?Plack::Response) of Raw data.
+Generate instance of [Plack::Response](http://search.cpan.org/perldoc?Plack::Response) of raw data.
 support raw type see $Amon2::Plugin::Web::Raw::CONTENT_TYPE_MAP
 
 # AUTHOR

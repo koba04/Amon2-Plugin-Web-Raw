@@ -54,7 +54,7 @@ __END__
 
 =head1 NAME
 
-Amon2::Plugin::Web::Raw - render Raw Data
+Amon2::Plugin::Web::Raw - render raw data
 
 =head1 SYNOPSIS
 
@@ -74,7 +74,7 @@ Amon2::Plugin::Web::Raw generate raw data response.
 
 =head1 METHODS $c->render_raw($type => $data);
 
-Generate instance of L<Plack::Response> of Raw data.
+Generate instance of L<Plack::Response> of raw data.
 support raw type see $Amon2::Plugin::Web::Raw::CONTENT_TYPE_MAP
 
 =head1 AUTHOR
