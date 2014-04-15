@@ -65,6 +65,19 @@ subtest 'content-type' => sub {
     }
 };
 
+subtest 'custom header' => sub {
+    my $res = $c->render_raw(
+        txt => 'test',
+        {
+            'Last-Modified'  => 'Tue, 01 Apr 2014 07:25:54 GMT',
+            'X-CustomHeader' => 'test',
+        }
+    );
+    is $res->status, 200, 'response code';
+    is $res->header('Last-Modified'), 'Tue, 01 Apr 2014 07:25:54 GMT';
+    is $res->header('X-CustomHeader'), 'test';
+};
+
 subtest 'unsupported type' => sub {
     dies_ok { $c->render_raw(json => '') } 'json is unsupported';
 };

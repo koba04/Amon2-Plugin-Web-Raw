@@ -33,7 +33,7 @@ sub init {
 }
 
 sub _render_raw {
-    my ($c, $type, $data) = @_;
+    my ($c, $type, $data, $header) = @_;
 
     my $res = $c->create_response(200);
 
@@ -41,6 +41,7 @@ sub _render_raw {
     die sprintf("unsupport raw type [%s]", $type) unless $content_type;
 
     $res->content_type($content_type);
+    $res->header(%$header) if $header;
     $res->content($data);
     $res->content_length(length $data);
 
@@ -72,7 +73,7 @@ Amon2::Plugin::Web::Raw - render raw data
 
 Amon2::Plugin::Web::Raw generate raw data response.
 
-=head1 METHODS $c->render_raw($type => $data);
+=head1 METHODS $c->render_raw($type => $data, [$header]);
 
 Generate instance of L<Plack::Response> of raw data.
 support raw type see $Amon2::Plugin::Web::Raw::CONTENT_TYPE_MAP
